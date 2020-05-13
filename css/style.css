@@ -1,0 +1,160 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    color: #36454f;
+}
+
+h2{
+    background-color: #36454f;
+    color: white;
+    text-align: center;
+    padding: .7em;
+    margin: 0;
+}
+
+h1{
+    color: #36454f;
+}
+
+p{
+    color: silver;
+}
+
+h1, 
+#latest{
+    text-align: center;
+}
+
+#latest {
+    border-bottom: #36454f double 5px;
+    padding-bottom: 1em;
+    color:#C0C0C0;
+    width:90%;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+fieldset{
+    padding-top: 1em;
+    border:none;
+    width:90%;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.first{
+    padding-top: 1em;
+}
+
+legend{
+    font-size: 1.5em;
+}
+
+.contact,
+.contact-zip{
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+    margin-bottom: .5em;
+    border: none;
+}
+
+input[type=text],
+input[type=email],
+#state,
+#zip {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    margin-top: 1em;
+}
+
+.contact-zip {
+    display:inline-flex;
+    padding:1em;
+    margin-bottom: .5em;
+}
+
+.newsletter,
+.format{
+    padding:.5em;
+    border: none;
+    color: #36454f;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder {
+    text-align: right;
+    color: grey;
+    padding-right: 10px;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    border: 1px #f1f1f1;
+    margin: 10px;
+}
+
+#plain{
+    margin-bottom: 2em;
+}
+
+#topics{
+    margin: 1em 0;
+    width: 100%;
+    border-radius: 5px;
+    border:none;
+    background: #f1f1f1;
+}
+
+button{
+    width: 100%;
+    padding: 1em;
+    background-color: #4ebbb5;
+    border-radius: 5px;
+    border: #4ebbb5 1px solid;
+    color: white;
+    cursor: pointer; 
+}
+
+footer{
+    padding-top: 1.5em;
+    text-align: center;
+    color: #C0C0C0;
+}
+
+ @media(min-width:768px){
+
+    #latest{
+        padding-bottom: 2em;
+    }
+    .first{
+        padding-top: 2em;
+    }
+
+    .contact, 
+    .contact-zip{
+        display: flex;
+        flex-direction: row;
+    }
+
+    input[type=text],
+    #state,
+    #email,
+    #zip {
+        flex: 1;
+        max-width: 85%;
+        justify-content: flex-end;
+        margin:0 1%;
+    }
+
+ }
+
+
+
+
+
+
+
