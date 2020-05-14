@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>The Code Review</title>
 </head>
@@ -15,7 +15,7 @@
         <p>Get the latest news on how your code is doing right in your inbox</p>
     </div>
     <form action="index.html">    
-    <fieldset class="top">
+    <fieldset>
         <legend class="first">Contact Information</legend>
     
         <div class="contact">
@@ -28,7 +28,7 @@
         </div>  
         <div class="contact"> 
             <label for="phone">Phone Number</label>
-            <input type ="text" id="phone" name="user_phone" placeholder="(415) 555-2671">
+            <input type ="tel" id="phone" name="user_phone" placeholder="(415) 555-2671">
         </div>     
         <div class="contact">
             <label for="street">Street Address</label>
@@ -93,7 +93,7 @@
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
-        </Select>
+        </select>
         </div>
         <div class="contact-zip">
             <label for ="zip">Zip Code</label>
@@ -114,8 +114,7 @@
         <div class="newsletter">
             <input type="checkbox" id="javascript" value="javascript" name="javascript-news"><label for="javascript">Javascript News</label>
         </div>       
-    </fieldset> 
-    <fieldset>              
+                
 
             <label>Newsletter Format</label>
         <div class="format">
@@ -124,13 +123,12 @@
         <div class="format">
             <input type="radio" id="plain" name="format"><label for="plain">Plain Text</label>
         </div>
-        
             <label for="topics">Other topics you would like to hear about</label>   
             <textarea id="topics" name="user_topics" cols="30" rows="10"></textarea><br>
-        
-            <button type="submit">Sign Up</button>
-    </fieldset>
+        </fieldset> 
+        <button type="submit">Sign Up</button>
     </form>
+            
     <footer>
         <p>Copyright The Code Review</p>
     </footer>   

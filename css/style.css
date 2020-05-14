@@ -1,6 +1,7 @@
 *{
     font-family: 'Roboto', sans-serif;
     color: #36454f;
+    box-sizing: content-box;
 }
 
 h2{
@@ -33,12 +34,17 @@ h1,
     margin: 0 auto
 }
 
+form{
+    background-color: whitesmoke;
+    width:90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
 fieldset{
     padding-top: 1em;
     border:none;
-    width:90%;
-    max-width: 900px;
-    margin: 0 auto
 }
 
 .first{
@@ -54,31 +60,34 @@ legend{
     display: flex;
     flex-direction: column;
     padding:1em;
-    margin-bottom: .5em;
     border: none;
 }
 
 input[type=text],
 input[type=email],
-#state,
-#zip {
+input[type=telephone],
+select[name=user_state]{
     background-color: cornsilk;
     border-radius: 5px;
     border: none;
     height: 25px;
-    margin-top: 1em;
+    padding: .5em;
+    font-size: 1em;
+    margin-top: 1em
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
-#state:focus,
-#zip:focus,
+input[type=telephone]:focus,
+select[name=user_state]:focus,
 #topics:focus {
+    transition: background-color 1.5s ease-out;
     background-color: #dbe8ff;
 }
 
 #zip{
     flex-basis: 25%;
+    display: block;
 }
 
 .contact-zip {
@@ -89,9 +98,9 @@ input[type=email]:focus,
 
 #bottom {
     border-top: #58949C solid 2.5px;
-    width:90%;
+    width:100%;
     max-width: 900px;
-    margin: 0 auto
+    margin: 0 auto;
     text-align:left;
 }
 
@@ -109,10 +118,9 @@ input[type=email]::placeholder {
     padding-right: 10px;
 }
 
-#phone::placeholder{
+input[type=telephone]::placeholder{
     text-align: left;
     color:#36454f;
-    padding-left: 10px;
 }
 
 input[type="checkbox"], 
@@ -136,19 +144,22 @@ input[type="radio"] {
 }
 
 button{
-    width: 100%;
+    width: 91.7%;
     padding: 1em;
     background-color: #58949C;
     border-radius: 5px;
     border: #58949C 1px solid;
     color: white;
     cursor: pointer; 
+    margin: auto;
 }
 
 button:hover{
     background-color: #dbe8ff;
     border: #70a6fe 1px solid;
     color: #36454f;
+    transition: 1s;
+    transform: scale(1.2);
 }
 
 footer{
@@ -183,8 +194,10 @@ media query 768px
     }
 
     input[type=text],
-    #state,
-    #email {
+    input[type=telephone],
+    input[type=email],
+    select[name=user_state],
+    #zip {
         flex: 100%;
         margin:0;
     }
@@ -198,20 +211,13 @@ media query 768px
         flex-basis: 35%;
     }
 
-    .contact-zip {
-        padding: 0 1em;
-        margin-bottom: .5em;
-    }
-
     #zip {
-       flex-basis: 50%; 
-    }
-
+            flex-basis: 50%;
+            display: inline-block;
+        }
+    
+        button{
+            width: 96.3%;
+        }
+   
  }
-
-
-
-
-
-
-
