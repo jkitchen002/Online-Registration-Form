@@ -28,7 +28,7 @@
         </div>  
         <div class="contact"> 
             <label for="phone">Phone Number</label>
-            <input type ="text" id="phone" name="user_phone">
+            <input type ="text" id="phone" name="user_phone" placeholder="(415) 555-2671">
         </div>     
         <div class="contact">
             <label for="street">Street Address</label>
@@ -36,11 +36,11 @@
         </div>
         <div class="contact">
             <label for="city">City</label>
-            <input type ="text" id="city" name="user_city">
+            <input type ="text" id="city" name="user_city" placeholder="Required" required>
         </div>
         <div class="contact">
             <label for="state">State</label>
-            <select name="user_state" id="state">
+            <select name="user_state" id="state" required>
                 <option value="">-- Choose State --</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -100,6 +100,8 @@
             <input type ="text" id="zip" name="User_city">
         </div>
     </fieldset>
+    
+    <hr id="bottom"><br>
     <fieldset>
         <legend>Newsletter</legend>
             <p class="newsletter">Select the newsletter you would like to receive</p>
@@ -111,7 +113,7 @@
         </div>
         <div class="newsletter">
             <input type="checkbox" id="javascript" value="javascript" name="javascript-news"><label for="javascript">Javascript News</label>
-        </div>    
+        </div>       
     </fieldset> 
     <fieldset>              
 

@@ -4,7 +4,7 @@
 }
 
 h2{
-    background-color: #36454f;
+    background-color: #58949C;
     color: white;
     text-align: center;
     padding: .7em;
@@ -25,7 +25,7 @@ h1,
 }
 
 #latest {
-    border-bottom: #36454f double 5px;
+    border-bottom: #58949C double 5px;
     padding-bottom: 1em;
     color:#C0C0C0;
     width:90%;
@@ -62,17 +62,37 @@ input[type=text],
 input[type=email],
 #state,
 #zip {
-    background-color: #f1f1f1;
+    background-color: cornsilk;
     border-radius: 5px;
     border: none;
     height: 25px;
     margin-top: 1em;
 }
 
+input[type=text]:focus,
+input[type=email]:focus,
+#state:focus,
+#zip:focus,
+#topics:focus {
+    background-color: #dbe8ff;
+}
+
+#zip{
+    flex-basis: 25%;
+}
+
 .contact-zip {
     display:inline-flex;
     padding:1em;
     margin-bottom: .5em;
+}
+
+#bottom {
+    border-top: #58949C solid 2.5px;
+    width:90%;
+    max-width: 900px;
+    margin: 0 auto
+    text-align:left;
 }
 
 .newsletter,
@@ -85,8 +105,14 @@ input[type=email],
 input[type=text]::placeholder,
 input[type=email]::placeholder {
     text-align: right;
-    color: grey;
+    color:#36454f;
     padding-right: 10px;
+}
+
+#phone::placeholder{
+    text-align: left;
+    color:#36454f;
+    padding-left: 10px;
 }
 
 input[type="checkbox"], 
@@ -106,17 +132,23 @@ input[type="radio"] {
     width: 100%;
     border-radius: 5px;
     border:none;
-    background: #f1f1f1;
+    background: cornsilk;
 }
 
 button{
     width: 100%;
     padding: 1em;
-    background-color: #4ebbb5;
+    background-color: #58949C;
     border-radius: 5px;
-    border: #4ebbb5 1px solid;
+    border: #58949C 1px solid;
     color: white;
     cursor: pointer; 
+}
+
+button:hover{
+    background-color: #dbe8ff;
+    border: #70a6fe 1px solid;
+    color: #36454f;
 }
 
 footer{
@@ -124,6 +156,10 @@ footer{
     text-align: center;
     color: #C0C0C0;
 }
+
+/* ===========================================
+media query 768px
+=========================================== */
 
  @media(min-width:768px){
 
@@ -134,20 +170,41 @@ footer{
         padding-top: 2em;
     }
 
-    .contact, 
-    .contact-zip{
+    .contact {
         display: flex;
         flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-zip {
+        display:inline-flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     input[type=text],
     #state,
-    #email,
+    #email {
+        flex: 100%;
+        margin:0;
+    }
+
+    .contact label{
+        flex-basis: 30%;
+    }
+
+    .contact-zip label{
+        margin-right: 8.5rem;
+        flex-basis: 35%;
+    }
+
+    .contact-zip {
+        padding: 0 1em;
+        margin-bottom: .5em;
+    }
+
     #zip {
-        flex: 1;
-        max-width: 85%;
-        justify-content: flex-end;
-        margin:0 1%;
+       flex-basis: 50%; 
     }
 
  }
