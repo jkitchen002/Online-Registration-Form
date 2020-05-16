@@ -110,16 +110,18 @@ select[name=user_state]:focus,
 }
 
 input[type=text]::placeholder,
-input[type=email]::placeholder {
+input[type=email]::placeholder,
+input[type=tel]::placeholder {
     text-align: right;
-    color:#36454f;
+    color: silver;
+    font-style: italic;
     padding-right: 10px;
 }
 
-input[type=tel]::placeholder{
+/* input[type=tel]::placeholder{
     text-align: left;
     color:#36454f;
-}
+} */
 
 input[type="checkbox"], 
 input[type="radio"] {
