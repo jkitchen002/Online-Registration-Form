@@ -1,7 +1,7 @@
 *{
     font-family: 'Roboto', sans-serif;
     color: #36454f;
-    box-sizing: content-box;
+
 }
 
 h2{
@@ -36,10 +36,8 @@ h1,
 
 form{
     background-color: whitesmoke;
-    width:90%;
     max-width: 900px;
     margin: 0 auto;
-
 }
 
 fieldset{
@@ -63,9 +61,15 @@ legend{
     border: none;
 }
 
+.contact-zip {
+    display:inline-flex;
+    padding:1em;
+    margin-bottom: .5em;
+}
+
 input[type=text],
 input[type=email],
-input[type=telephone],
+input[type=tel],
 select[name=user_state]{
     background-color: cornsilk;
     border-radius: 5px;
@@ -73,12 +77,13 @@ select[name=user_state]{
     height: 25px;
     padding: .5em;
     font-size: 1em;
-    margin-top: 1em
+    margin-top: 1em;
+    box-sizing: content-box;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=telephone]:focus,
+input[type=tel]:focus,
 select[name=user_state]:focus,
 #topics:focus {
     transition: background-color 1.5s ease-out;
@@ -87,18 +92,11 @@ select[name=user_state]:focus,
 
 #zip{
     flex-basis: 25%;
-    display: block;
-}
-
-.contact-zip {
-    display:inline-flex;
-    padding:1em;
-    margin-bottom: .5em;
 }
 
 #bottom {
     border-top: #58949C solid 2.5px;
-    width:100%;
+    max-width: 80%;
     max-width: 900px;
     margin: 0 auto;
     text-align:left;
@@ -118,7 +116,7 @@ input[type=email]::placeholder {
     padding-right: 10px;
 }
 
-input[type=telephone]::placeholder{
+input[type=tel]::placeholder{
     text-align: left;
     color:#36454f;
 }
@@ -144,14 +142,14 @@ input[type="radio"] {
 }
 
 button{
-    width: 91.7%;
+    width: 100%;
     padding: 1em;
     background-color: #58949C;
     border-radius: 5px;
     border: #58949C 1px solid;
     color: white;
     cursor: pointer; 
-    margin: auto;
+    box-sizing: border-box;
 }
 
 button:hover{
@@ -159,7 +157,7 @@ button:hover{
     border: #70a6fe 1px solid;
     color: #36454f;
     transition: 1s;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 footer{
@@ -181,43 +179,29 @@ media query 768px
         padding-top: 2em;
     }
 
-    .contact {
+    .contact,
+    .contact-zip {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .contact-zip {
-        display:inline-flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
     input[type=text],
-    input[type=telephone],
+    input[type=tel],
     input[type=email],
-    select[name=user_state],
-    #zip {
+    select[name=user_state] {
         flex: 100%;
-        margin:0;
+        margin: 0 auto;
     }
 
-    .contact label{
+    .contact label,
+    .contact-zip label{
         flex-basis: 30%;
     }
 
-    .contact-zip label{
-        margin-right: 8.5rem;
-        flex-basis: 35%;
-    }
-
     #zip {
-            flex-basis: 50%;
-            display: inline-block;
-        }
-    
-        button{
-            width: 96.3%;
-        }
-   
+            flex-basis:50%;
+            margin-right: 37%;
+          
+        }   
  }
